@@ -1,117 +1,599 @@
+/* =====================================
+   RESET
+===================================== */
 
-   body {
-            background-color: #f4f4f4;
-            font-family: Arial, Helvetica, sans-serifaa;
-        }
-
-        .package {
-            max-width: 450px;
-            background-color: white;
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 4px;
-
-        }
-
-        .box {
-            margin: 30px;
-        }
-
-        h2 {
-            padding: 20px;
-            text-align: center;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-        }
-
-        .info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px;
-            gap: 10px;
-        }
-
-        input {
-            padding: 10px;
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 1rem;
-            border-radius: 10px;
-            border: 1px solid rgb(128, 125, 125);
-        }
-
-        .submit {
-            margin: 10px;
-            display: flex;
-            gap: 20px;
-            font-size: 1rem;
-
-        }
-
-        button {
-            padding: 10px;
-            width: 100%;
-            border: none;
-            border-radius: 10px;
-        }
-
-        .submit button {
-            color: white;
-            background-color: blue;
-
-            transition: 0.3s;
-        }
-
-        .submit button:hover {
-            background-color: rgb(73, 73, 175);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        table.tr,
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        th,
-        td {
-            padding: 10px;
-        }
-
-        .action {
-            display: flex;
-            gap: 10px;
-        }
-
-        .delete {
-            background-color: red;
-            color: white;
-            transition: 0.3;
-        }
-
-        .delete:hover {
-            background-color: rgb(197, 65, 65);
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
+/* =====================================
+   BODY
+===================================== */
 
-        .edit {
-            background-color: green;
-            color: white;
-            transition: 0.3;
-        }
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 15px;
+    color: #222;
+}
 
-        .edit:hover {
-            background-color: rgb(52, 145, 52);
-        }
+
+/* =====================================
+   MAIN PACKAGE
+===================================== */
+
+.package {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================
+   HEADING
+===================================== */
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+
+/* =====================================
+   BOX
+===================================== */
+
+.box {
+    width: 100%;
+}
+
+
+/* =====================================
+   FORM
+===================================== */
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================
+   INPUT SECTION
+===================================== */
+
+.info {
+    width: 100%;
+    margin-bottom: 12px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================
+   INPUT
+===================================== */
+
+input {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid #aaa;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #fff;
+
+    transition: 0.3s ease;
+}
+
+
+/* Placeholder */
+
+input::placeholder {
+    color: #777;
+    opacity: 1;
+}
+
+
+/* Input focus */
+
+input:focus {
+    border-color: #0000ff;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 0, 255, 0.08);
+}
+
+
+/* =====================================
+   SEARCH + SAVE SECTION
+===================================== */
+
+.submit {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+/* Search input */
+
+.submit input {
+    flex: 1;
+}
+
+
+/* =====================================
+   BUTTON COMMON
+===================================== */
+
+button {
+    height: 46px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+/* Button click */
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* =====================================
+   SAVE BUTTON
+===================================== */
+
+.submit button {
+    flex: 1;
+
+    color: white;
+    background-color: #0000ff;
+}
+
+
+.submit button:hover {
+    background-color: #3333cc;
+}
+
+
+/* =====================================
+   TABLE CONTAINER
+===================================== */
+
+.table-box {
+    width: 100%;
+    max-width: 750px;
+
+    margin: 30px auto 0;
+
+    padding: 25px;
+
+    background-color: #fff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================
+   TABLE
+===================================== */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+
+/* Table border */
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+
+/* Table heading */
+
+th {
+    background-color: #f1f1f1;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-align: left;
+
+    padding: 13px 12px;
+}
+
+
+/* Table data */
+
+td {
+    padding: 12px;
+
+    font-size: 15px;
+
+    vertical-align: middle;
+}
+
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+.action {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* Action buttons */
+
+.action button {
+    width: 70px;
+    height: 34px;
+
+    padding: 0;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+/* =====================================
+   EDIT BUTTON
+===================================== */
+
+.edit {
+    background-color: #008000;
+}
+
+
+.edit:hover {
+    background-color: #006b00;
+}
+
+
+/* =====================================
+   DELETE BUTTON
+===================================== */
+
+.delete {
+    background-color: #ff0000;
+}
+
+
+.delete:hover {
+    background-color: #d90000;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .package {
+        padding: 22px;
+    }
+
+    .table-box {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px 8px;
+        overflow-x: hidden;
+    }
+
+
+    /* Main form */
+
+    .package {
+        width: 100%;
+
+        margin: 0 auto 20px;
+
+        padding: 18px;
+
+        border-radius: 10px;
+    }
+
+
+    /* Heading */
+
+    h2 {
+        font-size: 22px;
+
+        margin-bottom: 22px;
+
+        line-height: 1.3;
+    }
+
+
+    /* Input */
+
+    input {
+        height: 44px;
+
+        font-size: 15px;
+    }
+
+
+    /* Search + Save */
+
+    .submit {
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 15px;
+    }
+
+
+    .submit input,
+    .submit button {
+        width: 100%;
+
+        flex: none;
+    }
+
+
+    .submit button {
+        height: 44px;
+    }
+
+
+    /* Table card */
+
+    .table-box {
+        width: 100%;
+
+        margin-top: 20px;
+
+        padding: 15px;
+
+        border-radius: 10px;
+    }
+
+
+    /* =================================
+       MOBILE TABLE -> CARD
+    ================================= */
+
+    table,
+    tbody,
+    tr,
+    td {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    /* Hide table heading */
+
+    thead {
+        display: none;
+    }
+
+
+    /* Each row becomes card */
+
+    tr {
+        margin-bottom: 15px;
+
+        padding: 12px;
+
+        border: 1px solid #ddd;
+
+        border-radius: 10px;
+
+        background-color: #fafafa;
+
+        box-shadow:
+            0 2px 5px rgba(0, 0, 0, 0.06);
+    }
+
+
+    /* Remove normal table border */
+
+    table,
+    td {
+        border: none;
+    }
+
+
+    /* Data */
+
+    td {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 15px;
+
+        padding: 9px 4px;
+
+        border-bottom: 1px solid #e5e5e5;
+
+        font-size: 14px;
+    }
+
+
+    /* Last row */
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+
+    /* =================================
+       MOBILE TABLE LABELS
+    ================================= */
+
+    td:nth-child(1)::before {
+        content: "ID";
+        font-weight: 600;
+        color: #555;
+    }
+
+    td:nth-child(2)::before {
+        content: "Name";
+        font-weight: 600;
+        color: #555;
+    }
+
+    td:nth-child(3)::before {
+        content: "Age";
+        font-weight: 600;
+        color: #555;
+    }
+
+    td:nth-child(4)::before {
+        content: "Course";
+        font-weight: 600;
+        color: #555;
+    }
+
+    td:nth-child(5)::before {
+        content: "Action";
+        font-weight: 600;
+        color: #555;
+    }
+
+
+    /* =================================
+       MOBILE ACTION BUTTONS
+    ================================= */
+
+    .action {
+        display: flex;
+
+        justify-content: flex-end;
+
+        gap: 8px;
+
+        flex: 1;
+    }
+
+
+    .action button {
+        width: 65px;
+
+        height: 34px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================
+   VERY SMALL MOBILE
+===================================== */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 8px 5px;
+    }
+
+
+    .package {
+        padding: 15px;
+    }
+
+
+    .table-box {
+        padding: 12px;
+    }
+
+
+    h2 {
+        font-size: 20px;
+    }
+
+
+    input {
+        font-size: 14px;
+    }
+
+
+    td {
+        font-size: 13px;
+    }
+
+
+    .action button {
+        width: 58px;
+
+        font-size: 12px;
+    }
+}
